@@ -24,7 +24,7 @@ const Hero = () => {
           gutterBottom
           sx={{ fontWeight: 400 }}
         >
-          A Full Stack Engineer
+          A Full Stack Software Engineer
         </Typography>
       </Box>
     </Box>

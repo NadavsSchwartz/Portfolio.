@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+import { Avatar, Stack } from '@mui/material';
 
 const mockLeftGrid = [
   {
@@ -94,7 +95,7 @@ const Column = ({ data }) => {
             />
             <Box
               position={'absolute'}
-              bottom={'-100%'}
+              bottom={'-185%'}
               left={0}
               right={0}
               padding={4}
@@ -128,6 +129,34 @@ const Column = ({ data }) => {
                 {item.title}
               </Typography>
               <Typography>{item.description}</Typography>
+              <Box component={'div'} padding={1}>
+                <Stack direction="row" spacing={1} sx={{ display: 'flex' }}>
+                  <Box
+                    component={'a'}
+                    target="_blank"
+                    href={item.github}
+                    alt="github url"
+                    sx={{ marginLeft: 'auto', marginRight: 0 }}
+                  >
+                    <Avatar
+                      src="/GitHub.png"
+                      sx={{ marginLeft: 'auto', marginRight: 0 }}
+                    />
+                  </Box>
+                  <Box
+                    target="_blank"
+                    component={'a'}
+                    href={item.url}
+                    alt="website url"
+                    sx={{ marginLeft: 'auto', marginRight: 0 }}
+                  >
+                    <Avatar
+                      src="/www.svg"
+                      sx={{ marginLeft: 'auto', marginRight: 0 }}
+                    />
+                  </Box>
+                </Stack>
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -143,7 +172,7 @@ Column.propTypes = {
 const Main = () => {
   return (
     <Box>
-      <Grid container spacing={4}>
+      <Grid container spacing={3}>
         <Grid item xs={12} md={3}>
           <Column data={mockRightGrid} />
         </Grid>

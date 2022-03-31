@@ -8,74 +8,40 @@ import { useTheme } from '@mui/material/styles';
 
 const mockLeftGrid = [
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img8.jpg',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    title: 'Lorem ipsum dolor sit amet,',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img9.jpg',
-    description: 'Excepteur sint occaecat cupidatat non proident',
-    title: 'Consectetur adipiscing elit',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img12.jpg',
-    description: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-    title: 'Labore et dolore magna aliqua',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img11.jpg',
+    image: '/shorts.svg',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
-    title: 'Eiusmod tempor incididunt',
+      'Shorts is a modern URL shortener with a dedicated dashboard to manage your links and view the click rate statistics.',
+    title: 'Shorts',
+    github: 'https://github.com/NadavsSchwartz/shorts-client',
+    url: 'https://shorten.domains',
   },
 ];
-
 const mockMiddleGrid = [
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img11.jpg',
-    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus',
-    title: 'Sed ut perspiciatis',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img12.jpg',
+    image: '/hotelrevealer.svg',
     description:
-      'Qui blanditiis praesentium voluptatum deleniti atque corrupti',
-    title: 'Unde omnis iste natus',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img9.jpg',
-    description:
-      'On the other hand, we denounce with righteous indignation and dislike',
-    title: 'Sit voluptatem',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img8.jpg',
-    description: 'Quos dolores et quas molestias excepturi',
-    title: 'Accusantium doloremque',
+      'Hotel Revealer is an app that helps you Find hidden Priceline Hotel deals with a click of a button',
+    title: 'HotelRevealer',
+    github: 'https://github.com/NadavsSchwartz/hotel-revealer',
+    url: 'https://hotelrevealer.org/',
   },
 ];
-
 const mockRightGrid = [
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img12.jpg',
-    description: 'Et harum quidem rerum facilis est et expedita distinctio',
-    title: 'Totam rem aperiam',
+    image: '/muscletov.png',
+    description: 'Muscle Tov is a E-commerce platform for gym equipment',
+    title: 'MuscleTov',
+    github: 'https://github.com/NadavsSchwartz/muscletov',
+    url: 'https://muscletov.herokuapp.com',
   },
+];
+const mockFourthGrid = [
   {
-    image: 'https://assets.maccarianagency.com/backgrounds/img11.jpg',
-    description: 'Nam libero tempore, cum soluta nobis est eligendi optio',
-    title: 'Uae ab illo inventore',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img8.jpg',
-    description: 'Itaque earum rerum hic tenetur a sapiente delectus',
-    title: 'Beatae vitae dicta',
-  },
-  {
-    image: 'https://assets.maccarianagency.com/backgrounds/img9.jpg',
-    description:
-      'On the other hand, we denounce with righteous indignation and dislike',
-    title: 'Nemo enim ipsam',
+    image: '/cryptoapp.png',
+    description: 'Crypto App is a One stop app for anything Cryptocurrency',
+    title: 'CryptoApp',
+    github: 'https://github.com/NadavsSchwartz/cryptoApp',
+    url: 'https://cryptoapp.win',
   },
 ];
 
@@ -115,12 +81,12 @@ const Column = ({ data }) => {
               height={1}
               width={1}
               src={item.image}
-              alt="..."
+              alt={item.title}
               effect="blur"
-              maxHeight={{ xs: 400, sm: 600, md: 1 }}
+              maxHeight={{ xs: 460, md: 1 }}
               sx={{
                 transition: 'transform .7s ease !important',
-                transform: 'scale(1.0)',
+                transform: 'scale(0.8)',
                 objectFit: 'cover',
                 filter:
                   theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
@@ -178,14 +144,17 @@ const Main = () => {
   return (
     <Box>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={4}>
-          <Column data={mockLeftGrid} />
+        <Grid item xs={12} md={3}>
+          <Column data={mockRightGrid} />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={3}>
           <Column data={mockMiddleGrid} />
         </Grid>
-        <Grid item xs={12} md={4}>
-          <Column data={mockRightGrid} />
+        <Grid item xs={12} md={3}>
+          <Column data={mockLeftGrid} />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Column data={mockFourthGrid} />
         </Grid>
       </Grid>
     </Box>

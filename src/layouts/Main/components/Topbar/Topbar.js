@@ -14,7 +14,6 @@ const Topbar = ({ colorInvert = false }) => {
       justifyContent={'space-between'}
       alignItems={'center'}
       width={1}
-      marginTop={2}
     >
       <Box
         display={'flex'}
@@ -35,16 +34,16 @@ const Topbar = ({ colorInvert = false }) => {
         />
       </Box>
       <Box sx={{ display: { xs: 'flex' } }} alignItems={'center'}>
-        <Box marginLeft={4}>
+        <Box marginLeft={4} marginTop={1} marginBottom={1}>
           <Button
             variant="contained"
             color="primary"
             component="a"
             target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href=" /"
             size="large"
           >
-            Buy now
+            Download CV
           </Button>
         </Box>
       </Box>
@@ -53,8 +52,6 @@ const Topbar = ({ colorInvert = false }) => {
 };
 
 Topbar.propTypes = {
-  onSidebarOpen: PropTypes.func,
-  pages: PropTypes.object,
   colorInvert: PropTypes.bool,
 };
 

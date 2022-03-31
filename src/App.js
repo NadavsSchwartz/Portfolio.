@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Hero, Main as MainSection, Partners, Contact } from './components';
+import { Hero, Main as MainSection, Skills, Contact } from './components';
 
 const App = () => {
   const theme = useTheme();
@@ -12,9 +12,11 @@ const App = () => {
     <Main colorInvert={true}>
       <Hero />
       <Container>
-        <Partners />
+        <Skills />
       </Container>
+
       <Container>
+      
         <MainSection />
       </Container>
       <Box

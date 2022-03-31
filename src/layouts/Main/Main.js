@@ -42,6 +42,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
       <main>
         {children}
+
         <Divider />
       </main>
     </Box>
